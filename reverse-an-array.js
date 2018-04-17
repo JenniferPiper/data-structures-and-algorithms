@@ -1,11 +1,11 @@
-'use strict'
+'use strict';
 
-function reverseArray(inputArray){
-    let outputArray = [],
-        j = 0;
-    for (let i = inputArray.length - 1; i >= 0; i--) {
-        outputArray[j] = inputArray[i];
-        j++;
-    }
-    return outputArray;
+function reverseArray(inputArray) {
+  const outputArray = [];
+  let j = 0;
+  for (let i = inputArray.length - 1; i >= 0; i -= 1) {
+    outputArray[j] = inputArray[i];
+    j += 1;
+  }
+  return outputArray;
 }

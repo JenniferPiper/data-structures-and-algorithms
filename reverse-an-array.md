@@ -1,2 +1,5 @@
+# Reverse an Array
+Write a function to take in an array and return the input array with the elements reversed.
 
-![](../assets/01-reverse-an-array.jpg)
+## Solution
+![](assets/01-reverse-an-array.jpg)
