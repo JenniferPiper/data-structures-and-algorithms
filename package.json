@@ -4,7 +4,8 @@
   "description": "**Author**: Jennifer Piper **Version**: 1.0.0  ## Overview A collection of whiteboarding exercises to practice data structures and algorithms in a mock-interview context.",
   "main": "reverse-an-array.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
