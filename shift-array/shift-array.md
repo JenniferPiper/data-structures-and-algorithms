@@ -3,5 +3,5 @@ Write a function to take in an array and a new value. Return the input array wit
 
 ## Solution (Big O: N)
 
-![](assets/shift-array-a.jpg)
-![](assets/shift-array-b.jpg)
+![](../assets/shift-array-a.jpg)
+![](../assets/shift-array-b.jpg)
