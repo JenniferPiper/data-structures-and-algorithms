@@ -3,7 +3,7 @@
 function findMidpoint(start, end) {
   return Math.ceil(start + ((end - start) / 2));
 }
-function BinarySearch(array, key) {
+function BinarySearch(array, key) { //eslint-disable-line
   let startIndex = 0;
   let endIndex = array.length - 1;
   let midpoint = Math.ceil((array.length - 1) / 2);

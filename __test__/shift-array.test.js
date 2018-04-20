@@ -1,6 +1,6 @@
 'use strict';
 
-const shift = require('../shift-array');
+const shift = require('../shift-array/shift-array');
 
 describe('shift-array.test.js', () => {
   test('Should add new value to middle of array with odd number of elements', () => {
