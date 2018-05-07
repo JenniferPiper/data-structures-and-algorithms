@@ -1,12 +1,6 @@
 'use strict';
 
-const Animal = module.exports = class Animal {
-  constructor(name, type) {
-    this.name = name;
-    this.type = type;
-  }
-}
-const AnimalShelter = module.exports = class AnimalShelter {
+module.exports = class AnimalShelter {
   constructor() {
     this.catQueue = [];
     this.dogQueue = [];
@@ -18,10 +12,10 @@ const AnimalShelter = module.exports = class AnimalShelter {
     } else if (animal.type === 'dog') {
       this.dogQueue.unshift(animal);
       return 'dog added';
-    } // throw new Error('animal must be a cat or dog');
+    } throw new Error('animal must be a cat or dog');
   }
   dequeue(pref) {
-    let chosenType = '';
+    let chosenType = pref;
     if (pref !== 'cat' && pref !== 'dog') {
       const rand = Math.random();
       if (rand < 0.5) {
@@ -36,5 +30,4 @@ const AnimalShelter = module.exports = class AnimalShelter {
     } 
     return this.dogQueue.pop();
   }
-}
-
+};
