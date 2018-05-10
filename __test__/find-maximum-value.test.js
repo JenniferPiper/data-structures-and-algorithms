@@ -1,9 +1,9 @@
 'use strict';
 
-const BinaryTree = require('../find-maximum-value/binary-tree');
-const Node = require('../find-maximum-value/node');
-const traversals = require('../find-maximum-value/traversals');
-const findMax = require('../find-maximum-value/find-maximum-value');
+const BinaryTree = require('../find-maximum-value-binary-tree/binary-tree');
+const Node = require('../find-maximum-value-binary-tree/node');
+const traversals = require('../find-maximum-value-binary-tree/traversals');
+const findMax = require('../find-maximum-value-binary-tree/find-maximum-value-binary-tree');
 
 describe('treeA', () => {
   const one = new Node(1);
@@ -68,12 +68,12 @@ describe('treeB', () => {
   });
 });
 describe('treeC', () => {
-  const one = new Node(1);
-  const two = new Node(2);
-  const three = new Node(3);
-  const four = new Node(4);
-  const five = new Node(5);
-  const six = new Node(6);
+  const one = new Node(-1);
+  const two = new Node(0);
+  const three = new Node(-3);
+  const four = new Node(-4);
+  const five = new Node(-5);
+  const six = new Node(-6);
 
   const treeC = new BinaryTree(one);
 
@@ -86,9 +86,9 @@ describe('treeC', () => {
   four.right = six;
 
   test('treeC pre-order', () => {
-    expect(traversals.runTraversal(treeC.root, 'pre-order')).toEqual('1,2,3,4,5,6');
+    expect(traversals.runTraversal(treeC.root, 'pre-order')).toEqual('-1,0,-3,-4,-5,-6');
   });
   test('treeC findMax', () => {
-    expect(findMax.findMaxumumValue(treeC.root)).toEqual(6);
+    expect(findMax.findMaxumumValue(treeC.root)).toEqual(0);
   });
 });

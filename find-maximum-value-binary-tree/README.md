@@ -5,4 +5,4 @@
 ## Solution
 
 
-![](../assets/find-maximum-value.jpg)
+![](../assets/find-maximum-value-binary-tree.jpg)
