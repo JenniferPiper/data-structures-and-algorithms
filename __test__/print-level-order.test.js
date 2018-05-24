@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 // const KaryTree = require('../print-level-order/kary-tree');
 const Node = require('../print-level-order/node');
 // const traversal = require('../print-level-order/print-level-order');
