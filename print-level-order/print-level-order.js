@@ -7,24 +7,30 @@ const traversal = module.exports = {};
 traversal.printLevelOrder = (rootNode) => {
   const storage = new Queue();
   let outputString = '';
+  let current = rootNode;
+  let thisLevelCount = 0;
+  let nextLevelCount = current.children.length;
 
-  function traverseTree(current) {
-    if (current === '\n') {
-      outputString += current;
-    } else {
-      outputString += current.value;
+  storage.enqueue(current);
+
+  while (!storage.isEmpty()) {
+    current = storage.dequeue();
+    outputString += current.value;
+
+    for (let i = 0; i < current.children.length; i++) {
+      storage.enqueue(current.children[i]);
     }
 
-    while (!storage.isEmpty()) {
-      for (let i = 0; i < current.children.length; i++) {
-        storage.enqueue(current.children[i]);
-      }
+    if (thisLevelCount !== 0) {
+      nextLevelCount += current.children.length;
+      thisLevelCount -= 1;
     }
-    storage.enqueue('\n');
-    return null;
+
+    if (thisLevelCount === 0) {
+      outputString += '\n';
+      thisLevelCount = nextLevelCount;
+      nextLevelCount = 0;
+    }
   }
-
-  storage.enqueue(rootNode.value);
-  traverseTree(rootNode);
   return outputString;
 };
