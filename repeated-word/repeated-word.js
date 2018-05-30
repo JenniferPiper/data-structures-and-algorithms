@@ -16,7 +16,7 @@ words.repeatedWord = (inputString) => {
   currentChar = inputString[charCount].toLowerCase();
 
   while (charCount < len - 1) {
-    if (!currentChar.match(/[a-zA-Z]/)) {
+    while (!currentChar.match(/[a-zA-Z]/) && charCount < len - 1) {
       charCount += 1;
       currentChar = inputString[charCount].toLowerCase();
     }
