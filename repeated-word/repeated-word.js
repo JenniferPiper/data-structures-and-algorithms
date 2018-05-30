@@ -10,6 +10,9 @@ words.repeatedWord = (inputString) => {
   let currentChar = '';
   let charCount = 0;
 
+  if (!inputString) {
+    return 'Error: empty input string.';
+  }
   currentChar = inputString[charCount].toLowerCase();
 
   while (charCount < len - 1) {
@@ -19,7 +22,6 @@ words.repeatedWord = (inputString) => {
     }
 
     while (currentChar.match(/[a-zA-Z]/) && charCount < len - 1) {
-
       currentWord += currentChar;
       charCount += 1;
       currentChar = inputString[charCount].toLowerCase();
