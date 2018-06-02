@@ -1,4 +1,4 @@
-# Tree Intersection
+# Left Join Two Hashmaps
 Write a function to left-join two hashmaps into a single data structure.
 The first hashmap contains entries with the pattern word : synonym.
 The second hasmap contains entries with the pattern
